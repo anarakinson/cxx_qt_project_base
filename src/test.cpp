@@ -1,3 +1,4 @@
+
 #include <QApplication>
 #include <QPushButton>
 
@@ -10,5 +11,5 @@ int main(int argc, char **argv) {
     button1.show();
 
     return app.exec();
-    
+
 }

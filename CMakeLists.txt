@@ -13,13 +13,26 @@ if(CMAKE_VERSION VERSION_LESS "3.7.0")
     set(CMAKE_INCLUDE_CURRENT_DIR ON)
 endif()
 
+
+# find package
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
+
+# add executable
 add_executable(helloworld
     src/test.cpp
 )
 
+
+# include
+include_directories(
+    ${CMAKE_SOURCE_DIR}/include
+)
+
+
+# link libraries
 target_link_libraries(helloworld Qt5::Widgets)
+
 
 # set target properties
 set_target_properties(
